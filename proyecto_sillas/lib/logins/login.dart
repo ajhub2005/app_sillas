@@ -28,10 +28,10 @@ class _LoginPageState extends State<LoginPage> {
               // Icons.login, // Comentamos esto
               Image.asset(
                 'assets/images/logo_chair.png', // Ruta de la imagen
-                width: 400,
-                height: 200,
+                width: 100,
+                height: 100,
               ),
-              const SizedBox(height: 70),
+              // const SizedBox(height: 10),
               TextFormField(
                 controller: _emailController,
                 decoration:
@@ -44,7 +44,7 @@ class _LoginPageState extends State<LoginPage> {
                   return null;
                 },
               ),
-              const SizedBox(height: 16),
+              // const SizedBox(height: 16),
               TextFormField(
                 controller: _passwordController,
                 decoration: const InputDecoration(labelText: 'Contraseña'),
@@ -58,18 +58,17 @@ class _LoginPageState extends State<LoginPage> {
                 },
               ),
 
-              const SizedBox(height: 50),
+              // const SizedBox(height: 50),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, "/alejo");
+                  Navigator.pushNamed(context, "/opcionnes");
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blueGrey, // Cambia el color aquí
                 ),
                 child: const Text('Iniciar sesión'),
               ),
-
-              const SizedBox(height: 50),
+              // const SizedBox(height: 50),
               ElevatedButton(
                 onPressed: () {
                   Navigator.pushNamed(context, "/registro");
