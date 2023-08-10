@@ -48,16 +48,16 @@ class _DemoMWDrawerScreen4State extends State<DemoMWDrawerScreen4> {
     super.initState();
     getData.add(
       SampleListModel(
-        title: "Payment",
-        icon: Icons.payment,
-        launchWidget: Center(child:Text("Payment View", style: boldTextStyle)),
+        title: "principal",
+        icon: Icons.home_filled,
+        launchWidget: Center(child:Text("principal View", style: boldTextStyle)),
       ),
     );
     getData.add(
       SampleListModel(
-        title: "Promo",
-        icon: Icons.card_giftcard,
-        launchWidget: Center(child:Text("Promo View", style: boldTextStyle)),
+        title: "contactanos",
+        icon: Icons.contact_mail_rounded,
+        launchWidget: Center(child:Text("contactanos View", style: boldTextStyle)),
       ),
     );
     getData.add(
@@ -74,20 +74,20 @@ class _DemoMWDrawerScreen4State extends State<DemoMWDrawerScreen4> {
         launchWidget: Center(child:Text("Help View", style: boldTextStyle)),
       ),
     );
-    getData.add(
-      SampleListModel(
-        title: "About Us",
-        icon: Icons.info_outline,
-        launchWidget: Center(child:Text("About Us View", style: boldTextStyle)),
-      ),
-    );
-    getData.add(
-      SampleListModel(
-        title: "Rate Us",
-        icon: Icons.star_border,
-        launchWidget: Center(child:Text("Rate Us View", style: boldTextStyle)),
-      ),
-    );
+    // getData.add(
+    //   SampleListModel(
+    //     title: "About Us",
+    //     icon: Icons.info_outline,
+    //     launchWidget: Center(child:Text("About Us View", style: boldTextStyle)),
+    //   ),
+    // );
+    // getData.add(
+    //   SampleListModel(
+    //     title: "Rate Us",
+    //     icon: Icons.star_border,
+    //     launchWidget: Center(child:Text("Rate Us View", style: boldTextStyle)),
+    //   ),
+    // );
     init();
   }
 
