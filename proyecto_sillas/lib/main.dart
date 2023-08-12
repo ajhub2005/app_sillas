@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'logins/login.dart';
 import 'logins/registro.dart';
 import 'home/principal.dart';
-import 'home/opciones_bar.dart';
+import 'home/menu_opciones.dart';
 // import 'home/home.dart';
 
 // import 'package:flutter/services.dart' show rootBundle;
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const LoginPage(),
         '/registro': (context) => const SignupPage(),
         '/alejo': (context) => const MainMenuPage(),
-        '/opcionnes': (context) => const DemoMWDrawerScreen4(),
+        '/opcionnes': (context) => const DemoMWDrawerScreen2(),
       },
     );
   }

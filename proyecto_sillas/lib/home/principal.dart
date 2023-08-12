@@ -10,11 +10,8 @@ class ProductPage extends StatefulWidget {
 class _ProductPageState extends State<ProductPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Detalles del Producto'),
-      ),
-      body: const Center(
+    return const Scaffold(
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -36,61 +33,72 @@ class MainMenuPage extends StatefulWidget {
 }
 
 class _MainMenuPageState extends State<MainMenuPage> {
+  get menuNavigatorKey => null;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Menú Principal'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'Bienvenido',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(height: 20),
-            // Image.asset(
-            //   'assets/images/welcome_image.png', // Ruta de la imagen
-            //   width: 200,
-            //   height: 200,
-            // ),
-            const SizedBox(height: 20),
+      body: Navigator(
+        key: menuNavigatorKey,
+        onGenerateRoute: (RouteSettings settings) {
+          return MaterialPageRoute(
+            settings: settings,
+            builder: (BuildContext context) {
+              return Center(
+                // Contenido de MainMenuPage...
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    const Text(
+                      'Bienvenido',
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    // Image.asset(
+                    //   'assets/images/welcome_image.png', // Ruta de la imagen
+                    //   width: 200,
+                    //   height: 200,
+                    // ),
+                    const SizedBox(height: 20),
 
-            const Column(
-              mainAxisAlignment:
-                  MainAxisAlignment.center, // para centrar verticalmente
-              children: [
-                Center(
-                  child: Text(
-                    '''Somos una innovadora aplicación móvil diseñada para el negocio de sillas,
+                    const Column(
+                      mainAxisAlignment: MainAxisAlignment
+                          .center, // para centrar verticalmente
+                      children: [
+                        Center(
+                          child: Text(
+                            '''Somos una innovadora aplicación móvil diseñada para el negocio de sillas,
                      ya sea compras de sillas en línea  o también ofrece alquiler de sillas
                       para fiestas o eventos que ofrece una experiencia de compra única y conveniente
                        para clientes de todo tipo. Ya sea que esté buscando sillas para su hogar,
                         oficina, eventos especiales o cualquier otro lugar, “CHAILS" tiene una amplia
                          variedad de opciones para satisfacer sus experiencias y comodidades.
                      ''',
-                    // tu texto aquí
-                  ),
+                            // tu texto aquí
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 20),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ProductPage()),
+                        );
+                      },
+                      child: const Text('Ver Nuestros Servicios'),
+                    ),
+                  ],
                 ),
-              ],
-            ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const ProductPage()),
-                );
-              },
-              child: const Text('Ver Nuestros Servicios'),
-            ),
-          ],
-        ),
+              );
+            },
+          );
+        },
       ),
     );
   }
