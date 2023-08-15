@@ -79,8 +79,8 @@ class _SignupPageState extends State<SignupPage> {
               const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
-                  // aqui va la ruta de donde quiero que me mande desoues de presionar el boton
-                   Navigator.pushNamed(context, "/registro");
+                  // aqui va la ruta de donde quiero que me mande despues de presionar el boton
+                  Navigator.pushNamed(context, "/registro");
                 },
                 child: const Text('Registrarse'),
               ),

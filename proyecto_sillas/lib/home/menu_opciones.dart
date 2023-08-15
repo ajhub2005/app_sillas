@@ -9,9 +9,6 @@ import 'Settings.dart';
 import 'contactanos.dart';
 import 'ayuda.dart';
 
-
-
-
 class DemoMWDrawerScreen2 extends StatefulWidget {
   const DemoMWDrawerScreen2({super.key});
 
@@ -23,38 +20,33 @@ class DemoMWDrawerScreen2 extends StatefulWidget {
 class _DemoMWDrawerScreen2State extends State<DemoMWDrawerScreen2> {
   GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
 
-
   GlobalKey<NavigatorState> menuNavigatorKey = GlobalKey<NavigatorState>();
-  
 
-// aqui van las visatas o archivos que quiero que me retornen cuando yo presione esa opciono 
+// aqui van las visatas o archivos que quiero que me retornen cuando yo presione esa opciono
   List<Widget> pages = [
 // esta es la vista de principal.dart
     const MainMenuPage(),
 // las demas osea el resto son las clases que estan en los demas archivos
-// solo se importa el archivo y se coloca el nombre de la clase 
+// solo se importa el archivo y se coloca el nombre de la clase
     const ProfileScreen(),
     const MessagesScreen(),
     const NotificationsScreen(),
-   const SettingsScreen(),
-   const ContactUsScreen(),
-   const HelpScreen(),
+    const SettingsScreen(),
+    const ContactUsScreen(),
+    const HelpScreen(),
   ];
 
-// estos son el texto que quiero queme aparesca al momento de abrir el menu de ocpciones 
+// estos son el texto que quiero queme aparesca al momento de abrir el menu de ocpciones
 // tambien se puede modificar
   List<String> pageTitles = [
     "Home",
     "My Profile",
     "Messages",
-    "Notifications",
-    "Settings",
     "Contact Us",
-    "Help",
   ];
 
-  TextStyle primaryTextStyle =
-      const TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 16);
+  TextStyle primaryTextStyle = const TextStyle(
+      fontWeight: FontWeight.bold, color: Colors.white, fontSize: 16);
 
   @override
   void initState() {
@@ -72,12 +64,13 @@ class _DemoMWDrawerScreen2State extends State<DemoMWDrawerScreen2> {
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
-        // este es el titulo del bar se puede cambiar 
-        title: const Text('Alejo S.A', style: TextStyle(color: Colors.black, fontSize: 22)),
+        // este es el titulo del bar se puede cambiar
+        title: const Text('Alejo S.A',
+            style: TextStyle(color: Colors.black, fontSize: 22)),
         backgroundColor: Colors.white,
         automaticallyImplyLeading: false,
         leading: IconButton(
-          icon:const Icon(Icons.menu, color: Colors.black),
+          icon: const Icon(Icons.menu, color: Colors.black),
           onPressed: () {
             scaffoldKey.currentState!.openDrawer();
           },
@@ -89,7 +82,7 @@ class _DemoMWDrawerScreen2State extends State<DemoMWDrawerScreen2> {
         child: Drawer(
           child: Container(
             padding: const EdgeInsets.only(left: 16.0, right: 40),
-            decoration:const BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.white,
             ),
             width: 300,
@@ -101,7 +94,7 @@ class _DemoMWDrawerScreen2State extends State<DemoMWDrawerScreen2> {
                       alignment: Alignment.centerRight,
                       padding: const EdgeInsets.all(8),
                       child: IconButton(
-                        icon:const Icon(
+                        icon: const Icon(
                           Icons.power_settings_new,
                           color: Colors.black,
                         ),
@@ -119,19 +112,23 @@ class _DemoMWDrawerScreen2State extends State<DemoMWDrawerScreen2> {
                         border: Border.all(width: 2, color: Colors.orange),
                       ),
                     ),
-                  const  SizedBox(height: 5.0),
+                    const SizedBox(height: 5.0),
 
-                  // estos son los textos que quiero que aparescan cuando haro el menu de opciones
-                   const Text(
+                    // estos son los textos que quiero que aparescan cuando haro el menu de opciones
+                    const Text(
                       "Alejandro hoyos xs",
-                      style: TextStyle(color: Colors.black, fontSize: 18.0, fontWeight: FontWeight.w600),
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.w600),
                     ),
-                  const  Text("alejo@gmail.com", style: TextStyle(color: Colors.black, fontSize: 16.0)),
-                   const SizedBox(height: 30),
+                    const Text("alejo@gmail.com",
+                        style: TextStyle(color: Colors.black, fontSize: 16.0)),
+                    const SizedBox(height: 30),
                     for (int i = 0; i < pageTitles.length; i++) ...[
                       itemList(pageTitles[i]),
-                    const  Divider(),
-                    const  SizedBox(height: 15),
+                      const Divider(),
+                      const SizedBox(height: 15),
                     ],
                   ],
                 ),
@@ -148,7 +145,7 @@ class _DemoMWDrawerScreen2State extends State<DemoMWDrawerScreen2> {
 
   Widget itemList(String title) {
     return GestureDetector(
-      child: Text(title, style:const TextStyle(color: Colors.black)),
+      child: Text(title, style: const TextStyle(color: Colors.black)),
       onTap: () {
         // print(title); // Imprimir en la consola el título seleccionado
         selectedIndex = pageTitles.indexOf(title);
@@ -165,8 +162,10 @@ class OvalRightBorderClipper extends CustomClipper<Path> {
     var path = Path();
     path.lineTo(0, 0);
     path.lineTo(size.width - 50, 0);
-    path.quadraticBezierTo(size.width, size.height / 4, size.width, size.height / 2);
-    path.quadraticBezierTo(size.width, size.height - (size.height / 4), size.width - 40, size.height);
+    path.quadraticBezierTo(
+        size.width, size.height / 4, size.width, size.height / 2);
+    path.quadraticBezierTo(size.width, size.height - (size.height / 4),
+        size.width - 40, size.height);
     path.lineTo(0, size.height);
     return path;
   }
@@ -177,12 +176,9 @@ class OvalRightBorderClipper extends CustomClipper<Path> {
   }
 }
 
-
-
-
 // -------------------------
-// estas son las clases y hay van todo lo que yo quiero que aparesca dentro de la opcion una ves que lo presione 
-// 
+// estas son las clases y hay van todo lo que yo quiero que aparesca dentro de la opcion una ves que lo presione
+//
 // aqui se queda un ejemplo de que como que una vista de otro archivo dentro del menu
 
 // class HomeScreen extends StatelessWidget {
@@ -195,13 +191,3 @@ class OvalRightBorderClipper extends CustomClipper<Path> {
 //     );
 //   }
 // }
-
-
-
-
-
-
-
-
-
-

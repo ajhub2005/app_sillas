@@ -83,13 +83,17 @@ class _MainMenuPageState extends State<MainMenuPage> {
             ),
             const SizedBox(height: 20),
 
-            ElevatedButton(
+           ElevatedButton(
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const Servicios()),
                 );
               },
+              style: ElevatedButton.styleFrom(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 25, vertical: 25), // Ajusta el padding
+              ),
               child: const Text('Ver Nuestros Servicios'),
             ),
           ],
@@ -98,3 +102,5 @@ class _MainMenuPageState extends State<MainMenuPage> {
     );
   }
 }
+
+
