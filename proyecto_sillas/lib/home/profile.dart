@@ -12,7 +12,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return const Center(
-      child: Text("gyvjhbyghbjnuyhbnuij",
+      child: Text("uttgyvjhbyghbjnuyhbnuij",
       
        style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
     );

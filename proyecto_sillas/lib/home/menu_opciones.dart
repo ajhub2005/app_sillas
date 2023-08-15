@@ -3,11 +3,8 @@ import 'package:flutter/material.dart';
 // se importan los archivos de cada vista que va a aparecer dentro del menu
 import 'principal.dart';
 import 'profile.dart';
-import 'mensaje.dart';
-import 'notificacion.dart';
-import 'Settings.dart';
 import 'contactanos.dart';
-import 'ayuda.dart';
+
 
 class DemoMWDrawerScreen2 extends StatefulWidget {
   const DemoMWDrawerScreen2({super.key});
@@ -29,19 +26,15 @@ class _DemoMWDrawerScreen2State extends State<DemoMWDrawerScreen2> {
 // las demas osea el resto son las clases que estan en los demas archivos
 // solo se importa el archivo y se coloca el nombre de la clase
     const ProfileScreen(),
-    const MessagesScreen(),
-    const NotificationsScreen(),
-    const SettingsScreen(),
     const ContactUsScreen(),
-    const HelpScreen(),
+   
   ];
 
 // estos son el texto que quiero queme aparesca al momento de abrir el menu de ocpciones
 // tambien se puede modificar
   List<String> pageTitles = [
-    "Home",
+    "Inicio",
     "My Profile",
-    "Messages",
     "Contact Us",
   ];
 
@@ -65,8 +58,8 @@ class _DemoMWDrawerScreen2State extends State<DemoMWDrawerScreen2> {
       key: scaffoldKey,
       appBar: AppBar(
         // este es el titulo del bar se puede cambiar
-        title: const Text('Alejo S.A',
-            style: TextStyle(color: Colors.black, fontSize: 22)),
+        title: const Text('CHAILS S.A',
+            style: TextStyle(color: Color.fromARGB(255, 0, 25, 78), fontSize: 22 , fontWeight: FontWeight.bold)),
         backgroundColor: Colors.white,
         automaticallyImplyLeading: false,
         leading: IconButton(
