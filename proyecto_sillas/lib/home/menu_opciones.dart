@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 // se importan los archivos de cada vista que va a aparecer dentro del menu
 import 'principal.dart';
-import 'profile.dart';
 import 'contactanos.dart';
 
 
@@ -25,7 +24,7 @@ class _DemoMWDrawerScreen2State extends State<DemoMWDrawerScreen2> {
     const MainMenuPage(),
 // las demas osea el resto son las clases que estan en los demas archivos
 // solo se importa el archivo y se coloca el nombre de la clase
-    const ProfileScreen(),
+   
     const ContactUsScreen(),
    
   ];
@@ -109,13 +108,13 @@ class _DemoMWDrawerScreen2State extends State<DemoMWDrawerScreen2> {
 
                     // estos son los textos que quiero que aparescan cuando haro el menu de opciones
                     const Text(
-                      "Alejandro hoyos xs",
+                      "Alejandro Hoyos",
                       style: TextStyle(
                           color: Colors.black,
                           fontSize: 18.0,
                           fontWeight: FontWeight.w600),
                     ),
-                    const Text("alejo@gmail.com",
+                    const Text("alejo0430@gmail.com",
                         style: TextStyle(color: Colors.black, fontSize: 16.0)),
                     const SizedBox(height: 30),
                     for (int i = 0; i < pageTitles.length; i++) ...[
