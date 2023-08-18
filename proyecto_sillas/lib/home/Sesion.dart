@@ -94,7 +94,7 @@ class Sesion extends StatelessWidget {
 
             },
             style: ElevatedButton.styleFrom(
-              primary: const Color.fromARGB(255, 62, 67, 71),
+              backgroundColor: const Color.fromARGB(255, 62, 67, 71),
               textStyle: const TextStyle(
                 fontSize: 20,
               ),

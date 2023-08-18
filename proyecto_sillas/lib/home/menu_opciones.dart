@@ -32,8 +32,7 @@ class _DemoMWDrawerScreen2State extends State<DemoMWDrawerScreen2> {
 // estos son el texto que quiero queme aparesca al momento de abrir el menu de ocpciones
 // tambien se puede modificar
   List<String> pageTitles = [
-    "Inicio",
-    "My Profile",
+   
     "Contact Us",
   ];
 
@@ -47,7 +46,7 @@ class _DemoMWDrawerScreen2State extends State<DemoMWDrawerScreen2> {
   }
 
   init() async {
-    await Future.delayed(const Duration(seconds: 1));
+    await Future.delayed(const Duration(seconds: 0));
     scaffoldKey.currentState!.openDrawer();
   }
 

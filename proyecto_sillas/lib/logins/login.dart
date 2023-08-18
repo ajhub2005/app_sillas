@@ -19,7 +19,7 @@ class _LoginPageState extends State<LoginPage> {
         title: const Text('Login'), // Título principal
       ),
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Color.fromARGB(169, 137, 163, 170), // Color de fondo gris claro
         ),
         child: Padding(

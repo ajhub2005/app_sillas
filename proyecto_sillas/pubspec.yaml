@@ -89,14 +89,7 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
   assets:
-    - assets/images/logo_chair.png
-    - assets/images/imagen1.png
-    - assets/images/imagen2.png
-    - assets/images/imagen6.png
-    - assets/images/imagen4.png
-    - assets/images/imagen8.png
-    - assets/images/imagen3.png
-  
+    - assets/images/
     
 
     
