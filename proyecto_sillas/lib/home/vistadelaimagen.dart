@@ -73,17 +73,11 @@ class OtraVista extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Otra Vista'),
       ),
-      body: Center(
-        child: const Text('Esta es otra vista'),
+      body: const Center(
+        child: Text('Esta es otra vista'),
       ),
     );
   }
 }
 
-void main() {
-  runApp(
-    MaterialApp(
-      home: FormularioDePago(),
-    ),
-  );
-}
+
