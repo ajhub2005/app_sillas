@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'vistadelaimagen.dart';
 
-
-class Sesion extends StatelessWidget {
-  const Sesion({Key? key}) : super(key: key);
+class compras extends StatelessWidget {
+  const compras({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Especial'),
+        title: const Text('Productos'),
       ),
       body: Container(
-        color: const Color.fromARGB(255, 234, 248, 255), // Color de fondo azul claro
+        color: const Color.fromARGB(
+            255, 234, 248, 255), // Color de fondo azul claro
         child: Center(
           child: SingleChildScrollView(
             child: Column(
@@ -20,7 +20,7 @@ class Sesion extends StatelessWidget {
               children: <Widget>[
                 const SizedBox(height: 0),
                 const Text(
-                  '¡Bienvenido a la Sección especial!',
+                  '¡Bienvenido a nuestros productos',
                   style: TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
@@ -28,7 +28,7 @@ class Sesion extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
                 const Text(
-                  'Aquí puedes ver productos especiales que tenemos para ti',
+                  'Aquí puedes los productos Disponibles que tenemos para ti',
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.normal,
@@ -38,16 +38,23 @@ class Sesion extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    // _buildProductCard(context, 'assets/images/imagen1.png', '\$86,99 US'),
-                    _buildProductCard(context, 'assets/images/imagen2.png', '\$75,80 US'),
+                    _buildProductCard(
+                      context,
+                      'assets/images/captura.PNG',
+                      '\$86,99 US',
+                    ),
+                    _buildProductCard(
+                        context, 'assets/images/imagen2.png', '\$75,80 US'),
                   ],
                 ),
                 const SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    // _buildProductCard(context, 'assets/images/imagen3.png', '\$59,99 US'),
-                    _buildProductCard(context, 'assets/images/imagen4.png', '\$42,50 US'),
+                    _buildProductCard(
+                        context, 'assets/images/imagen3.png', '\$59,99 US'),
+                    _buildProductCard(
+                        context, 'assets/images/Captura2.PNG', '\$42,50 US'),
                   ],
                 ),
                 // Puedes continuar agregando más filas de cuadros de productos
@@ -59,10 +66,11 @@ class Sesion extends StatelessWidget {
     );
   }
 
-  Widget _buildProductCard(BuildContext context, String imagePath, String price) {
+  Widget _buildProductCard(
+      BuildContext context, String imagePath, String price) {
     return Container(
-      width: 250,
-      height: 350,
+      width: 150,
+      height: 250,
       margin: const EdgeInsets.all(10),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -79,8 +87,8 @@ class Sesion extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset(imagePath, width: 200, height: 100),
-          const SizedBox(height: 25),
+          Image.asset(imagePath, width: 100, height: 100),
+          const SizedBox(height: 20),
           Text(
             'Costo: $price',
             style: const TextStyle(
@@ -88,21 +96,19 @@ class Sesion extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 10),
           ElevatedButton(
             onPressed: () {
               // Acción al presionar el botón
               Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const metododepago()),
-                    );
-
+                context,
+                MaterialPageRoute(builder: (context) => const metododepago()),
+              );
             },
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color.fromARGB(255, 62, 67, 71),
+              primary: const Color.fromARGB(255, 62, 67, 71),
               textStyle: const TextStyle(
-                fontSize: 20,
+                fontSize: 16,
               ),
               minimumSize: const Size(120, 40),
             ),
@@ -113,7 +119,3 @@ class Sesion extends StatelessWidget {
     );
   }
 }
-
-
-  
-

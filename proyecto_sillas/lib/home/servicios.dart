@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'vistadelaimagen.dart';
 import 'Sesion.dart';
-// import 'vistadelaimagen.dart';
+import 'compras.dart';
+
+
+
 
 class Servicios extends StatelessWidget {
   const Servicios({super.key});
@@ -49,7 +52,7 @@ class Servicios extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const VistaDeLaImagen()),
+                          builder: (context) => const compras()),
                     );
                   },
                   child: SizedBox(

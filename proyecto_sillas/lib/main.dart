@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'logins/login.dart';
 import 'logins/registro.dart';
 import 'home/principal.dart';
-import 'home/menu_opciones.dart';
-import 'home/for_pago.dart';
+// import 'home/menu_opciones.dart';
+
 // import 'home/home.dart';
 
 // import 'package:flutter/services.dart' show rootBundle;
@@ -22,9 +22,9 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const LoginPage(),
         '/registro': (context) => const SignupPage(),
-        '/alejo': (context) => const MainMenuPage(),
-        '/opcionnes': (context) => const DemoMWDrawerScreen2(),
-        '/for_opagos': (context) => const for_pago(),
+        // '/alejo': (context) => const MainMenuPage(),
+        '/opcionnes': (context) => const MainMenuPage(),
+       
       },
     );
   }
