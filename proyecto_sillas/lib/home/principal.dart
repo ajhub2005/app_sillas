@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'servicios.dart';
+import 'package:proyecto_sillas/logins/login.dart';
 
 class MainMenuPage extends StatefulWidget {
   // ignore: use_key_in_widget_constructors
@@ -13,16 +14,32 @@ class _MainMenuPageState extends State<MainMenuPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Menú Principal'),
-      ),
+     
+      
       body: Stack(
+        
         children: [
           Container(
             decoration: const BoxDecoration(
               color: Color.fromARGB(255, 207, 223, 231), // Cambia el color de fondo
             ),
           ),
+          Container(
+                      alignment: Alignment.topRight,
+                      padding: const EdgeInsets.all(8),
+                      child: IconButton(
+                        icon: const Icon(
+                          Icons.power_settings_new,
+                          color: Colors.black,
+                        ),
+                        onPressed: () {
+                          // Cerrar la sesión y redirigir a la pantalla de inicio de sesión
+                          Navigator.of(context).pushReplacement(MaterialPageRoute(
+                            builder: (context) => const LoginPage(), // Cambia LoginScreen por tu pantalla de inicio de sesión
+                          ));
+                        },
+                      ),
+                    ),
           Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'vistadelaimagen.dart';
 
 class compras extends StatelessWidget {
-  const compras({super.key});
+  const compras({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -40,11 +40,16 @@ class compras extends StatelessWidget {
                   children: [
                     _buildProductCard(
                       context,
+                      'Silla de Oficina', // Nombre del producto
                       'assets/images/captura.PNG',
                       '\$86,99 US',
                     ),
                     _buildProductCard(
-                        context, 'assets/images/imagen2.png', '\$75,80 US'),
+                      context,
+                      'Sillas de Comedor', // Nombre del producto
+                      'assets/images/imagen2.png',
+                      '\$75,80 US',
+                    ),
                   ],
                 ),
                 const SizedBox(height: 20),
@@ -52,9 +57,17 @@ class compras extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     _buildProductCard(
-                        context, 'assets/images/imagen3.png', '\$59,99 US'),
+                      context,
+                      'Silla Gamer', // Nombre del producto
+                      'assets/images/imagen3.png',
+                      '\$59,99 US',
+                    ),
                     _buildProductCard(
-                        context, 'assets/images/Captura2.PNG', '\$42,50 US'),
+                      context,
+                      'Sillas Clasicas', // Nombre del producto
+                      'assets/images/Captura2.PNG',
+                      '\$42,50 US',
+                    ),
                   ],
                 ),
                 // Puedes continuar agregando más filas de cuadros de productos
@@ -67,7 +80,7 @@ class compras extends StatelessWidget {
   }
 
   Widget _buildProductCard(
-      BuildContext context, String imagePath, String price) {
+      BuildContext context, String productName, String imagePath, String price) {
     return Container(
       width: 150,
       height: 250,
@@ -87,6 +100,14 @@ class compras extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          Text(
+            productName, // Nombre del producto
+            style: const TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const SizedBox(height: 10),
           Image.asset(imagePath, width: 100, height: 100),
           const SizedBox(height: 20),
           Text(

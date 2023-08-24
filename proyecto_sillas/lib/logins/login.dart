@@ -23,7 +23,7 @@ class _LoginPageState extends State<LoginPage> {
           color: Color.fromARGB(169, 137, 163, 170), // Color de fondo gris claro
         ),
         child: Padding(
-          padding: const EdgeInsets.all(100.0),
+          padding: const EdgeInsets.all(150.0),
           child: Form(
             key: _formKey,
             child: SingleChildScrollView(
