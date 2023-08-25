@@ -90,8 +90,8 @@ class _MainMenuPageState extends State<MainMenuPage> {
                     );
                   },
                   style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 25, vertical: 25), // Ajusta el padding
+                    padding: const EdgeInsets.symmetric( horizontal: 25, vertical: 25), 
+                    backgroundColor: Color.fromARGB(255, 5, 143, 156)// Ajusta el padding
                   ),
                   child: const Text('Ver Nuestros Servicios'),
                 ),

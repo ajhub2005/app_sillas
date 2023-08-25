@@ -55,7 +55,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   const SizedBox(
                       height:
-                          20), // Espacio entre campos de correo y contraseña
+                          40), // Espacio entre campos de correo y contraseña
                   TextFormField(
                     controller: _passwordController,
                     decoration: const InputDecoration(

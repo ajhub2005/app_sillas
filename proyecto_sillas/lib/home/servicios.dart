@@ -93,8 +93,8 @@ class Servicios extends StatelessWidget {
                     );
                   },
                   style: ElevatedButton.styleFrom(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 25, vertical: 25), // Ajusta el padding
+                    padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 25),
+                    backgroundColor: Color.fromARGB(255, 193, 8, 8) // Ajusta el padding
                   ),
                   child: const Text('Seccion Especial'),
                 ),

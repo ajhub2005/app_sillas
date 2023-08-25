@@ -82,10 +82,11 @@ class _SignupPageState extends State<SignupPage> {
                 const SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
-                    // Aquí va la lógica para procesar el registro
+                  Navigator.pushNamed(context, "/");  // Aquí va la lógica para procesar el registro
                     // Por ejemplo, puedes validar y enviar los datos al servidor
                   },
                   child: const Text('Registrarse'),
+                  
                 ),
               ],
             ),

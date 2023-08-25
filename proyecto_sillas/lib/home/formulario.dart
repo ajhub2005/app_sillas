@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 class FormularioMasterCard extends StatefulWidget {
@@ -44,8 +46,10 @@ class _FormularioMasterCardState extends State<FormularioMasterCard> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Formulario de Pago'),
+        backgroundColor: Colors.blueGrey, // Cambia el color del AppBar
       ),
       body: Padding(
+
         padding: const EdgeInsets.all(16.0),
         child: Form(
           key: _formKey,
@@ -176,49 +180,50 @@ class _FormularioMasterCardState extends State<FormularioMasterCard> {
                   ),
                 ],
               ),
-             const SizedBox(height: 50),
-              // ElevatedButton(
-              //   onPressed: _submitForm,
-              //   child: const Text('Realizar Pago'),
-              // ),
+        const SizedBox(height: 50),
               Center(
-                
-                
-                 child: ElevatedButton(
-            onPressed: () {
-              
-              // _submitForm();
-              // Simular proceso de pago exitoso
-              showDialog(
-                context: context,
-                builder: (context) {
-                  return AlertDialog(
-                    title: const Text('Compra Exitosa'),
-                    content: const Text('Gracias por tu compra'),
-                    actions: [
-                      TextButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                          // Vaciar el carrito después de la compra exitosa
-                          // (Puedes hacer esto con setState o utilizando un estado global)
-                        },
-                    
-                        child: const Text('Aceptar'),
-                      ),
-                    ],
-                  );
-                  
-                },
-              );
-            },     style: ElevatedButton.styleFrom(
-                         padding: const EdgeInsets.symmetric(
-                        horizontal: 25, vertical: 24), // Ajusta el padding
+                child: ElevatedButton(
+                  onPressed: () {
+                    showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          title: const Text('Compra Exitosa'),
+                          content: const Text('Gracias por tu compra'),
+                          actions: [
+                            TextButton(
+                              onPressed: () {
+                                Navigator.pop(context);
+                                // Vaciar el carrito después de la compra exitosa
+                                // (Puedes hacer esto con setState o utilizando un estado global)
+                              },
+                              child: const Text('Aceptar'),
+                            ),
+                          ],
+                        );
+                      },
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
+                    backgroundColor: Colors.green,
                   ),
-            child: const Text('Realizar Pago'),
-          ),
+                  child: const Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      Text('Realizar Pago'),
 
-              )
-             
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(height: 20),
+              Center(
+                child: Image.asset(
+                  'assets/images/fondodinero.jpg',
+                  height: 100,
+                ),
+              ),
             ],
           ),
         ),
