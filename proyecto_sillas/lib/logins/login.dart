@@ -20,7 +20,8 @@ class _LoginPageState extends State<LoginPage> {
       ),
       body: Container(
         decoration: const BoxDecoration(
-          color: Color.fromARGB(169, 137, 163, 170), // Color de fondo gris claro
+          color:
+              Color.fromARGB(169, 137, 163, 170), // Color de fondo gris claro
         ),
         child: Padding(
           padding: const EdgeInsets.all(150.0),
@@ -82,6 +83,7 @@ class _LoginPageState extends State<LoginPage> {
                     children: [
                       TextButton(
                         onPressed: () {
+                          Navigator.pushNamed(context, '/registro');
                           // Agrega aquí la lógica para recuperar la contraseña
                         },
                         child: const Text('Recuperar Contraseña'),
